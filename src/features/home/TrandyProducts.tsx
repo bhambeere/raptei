@@ -12,59 +12,59 @@ import CardContent from '@mui/material/CardContent';
 const categories = [
     {
         id: 1,
-        text: "Colorful Stylish Shirt",
+        text: "Women Pleated White Dress",
         imageUrl: "/static/product-1.jpg",
-        price: '$120.00',
-        offerPrice: '$110.00'
+        price: '$60.00',
+        offerPrice: '$50.00'
     },
     {
         id: 2,
-        text: "Colorful Stylish Shirt",
+        text: "Kid Denim Shirt",
         imageUrl: "/static/product-2.jpg",
-        price: '$120.00',
-        offerPrice: '$110.00'
+        price: '$45.00',
+        offerPrice: '$40.00'
     },
     {
         id: 3,
-        text: "Colorful Stylish Shirt",
+        text: "Men Leather Black Jacket",
         imageUrl: "/static/product-3.jpg",
         price: '$120.00',
         offerPrice: '$110.00'
     },
     {
         id: 4,
-        text: "Colorful Stylish Shirt",
+        text: "Women Western Black Dress",
         imageUrl: "/static/product-4.jpg",
-        price: '$120.00',
-        offerPrice: '$110.00'
+        price: '$150.00',
+        offerPrice: '$130.00'
     },
     {
         id: 5,
-        text: "Colorful Stylish Shirt",
+        text: "Kid Printed White TShirt",
         imageUrl: "/static/product-5.jpg",
-        price: '$120.00',
-        offerPrice: '$110.00'
+        price: '$40.00',
+        offerPrice: '$35.00'
     },
     {
         id: 6,
-        text: "Colorful Stylish Shirt",
+        text: "Men Western Black Blazer",
         imageUrl: "/static/product-6.jpg",
-        price: '$120.00',
-        offerPrice: '$110.00'
+        price: '$180.00',
+        offerPrice: '$150.00'
     },
     {
         id: 7,
-        text: "Colorful Stylish Shirt",
+        text: "Women Long Winter Jocket",
         imageUrl: "/static/product-7.jpg",
-        price: '$120.00',
-        offerPrice: '$110.00'
+        price: '$130.00',
+        offerPrice: '$115.00'
     },
     {
         id: 8,
-        text: "Colorful Stylish Shirt",
+        text: "Kid Blut Shirt",
         imageUrl: "/static/product-8.jpg",
-        price: '$120.00',
-        offerPrice: '$110.00'
+        price: '$50.00',
+        offerPrice: '$40.00'
     }
 ]
 const TrendyProducts = () => {
