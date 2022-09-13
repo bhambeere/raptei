@@ -11,48 +11,56 @@ import CardContent from '@mui/material/CardContent';
 
 const categories = [
     {
+        id: 1,
         text: "Colorful Stylish Shirt",
         imageUrl: "/static/product-1.jpg",
         price: '$120.00',
         offerPrice: '$110.00'
     },
     {
+        id: 2,
         text: "Colorful Stylish Shirt",
         imageUrl: "/static/product-2.jpg",
         price: '$120.00',
         offerPrice: '$110.00'
     },
     {
+        id: 3,
         text: "Colorful Stylish Shirt",
         imageUrl: "/static/product-3.jpg",
         price: '$120.00',
         offerPrice: '$110.00'
     },
     {
+        id: 4,
         text: "Colorful Stylish Shirt",
         imageUrl: "/static/product-4.jpg",
         price: '$120.00',
         offerPrice: '$110.00'
     },
     {
+        id: 5,
         text: "Colorful Stylish Shirt",
         imageUrl: "/static/product-5.jpg",
         price: '$120.00',
         offerPrice: '$110.00'
     },
     {
+        id: 6,
         text: "Colorful Stylish Shirt",
         imageUrl: "/static/product-6.jpg",
         price: '$120.00',
         offerPrice: '$110.00'
     },
     {
+        id: 7,
         text: "Colorful Stylish Shirt",
         imageUrl: "/static/product-7.jpg",
         price: '$120.00',
         offerPrice: '$110.00'
     },
     {
+        id: 8,
         text: "Colorful Stylish Shirt",
         imageUrl: "/static/product-8.jpg",
         price: '$120.00',
@@ -65,7 +73,7 @@ const TrendyProducts = () => {
             <Grid container rowSpacing={5} spacing={3}>
                 {categories.map(item => {
                     return (
-                        <Grid item xs={12} sm={12} md={3}>
+                        <Grid key={item.id} item xs={12} sm={12} md={3}>
                             <Card sx={{ maxWidth: 1, width: 1, height: 500, }}>
                                 <CardMedia
                                     component="img"

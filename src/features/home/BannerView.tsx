@@ -11,25 +11,17 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
+import { BannerType } from './types/BannerType';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const images = [
-    {
-        label: 'Fashionable Dress',
-        simpleText: '10% OFF YOUR FIRST ORDER',
-        imgPath: '/static/carousel-1.jpg',
-    },
-    {
-        label: 'Reasonable Price',
-        simpleText: '10% OFF YOUR FIRST ORDER',
-        imgPath: '/static/carousel-2.jpg',
-    },
-];
-
-const OfferSlider = () => {
+export interface BannerViewProps {
+    banners: Array<BannerType>;
+}
+const BannerView = (props: BannerViewProps): React.ReactElement => {
+    const { banners } = props;
     const theme = useTheme();
     const [activeStep, setActiveStep] = React.useState(0);
-    const maxSteps = images.length;
+    const maxSteps = banners.length;
 
     const handleNext = () => {
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -51,8 +43,8 @@ const OfferSlider = () => {
                 onChangeIndex={handleStepChange}
                 enableMouseEvents
             >
-                {images.map((step, index) => (
-                    <div key={step.label}>
+                {banners.map((step, index) => (
+                    <div key={step.id}>
                         {Math.abs(activeStep - index) <= 2 ? (
                             <Card sx={{ maxWidth: 1, width: 1, height: 500, }}>
                                 <Box sx={{ position: "relative" }}>
@@ -124,4 +116,4 @@ const OfferSlider = () => {
     );
 }
 
-export default OfferSlider;
+export default BannerView;

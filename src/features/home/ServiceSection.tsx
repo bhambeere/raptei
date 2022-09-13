@@ -12,22 +12,26 @@ import CallIcon from '@mui/icons-material/Call';
 
 const services = [
     {
+        id: 1,
         ariaLabel: "quality-product",
         text: "Quality Product",
         icon: <CheckIcon fontSize="large" sx={{ color: '#7b1fa2' }} />,
         color: '#7b1fa2'
     },
     {
+        id: 2,
         ariaLabel: "free-shipping",
         text: "Free Shipping",
         icon: <LocalShippingIcon fontSize="large" sx={{ color: '#7b1fa2' }} />
     },
     {
+        id: 3,
         ariaLabel: "14-day-return",
         text: "14-Day Return",
         icon: <SyncAltIcon fontSize="large" sx={{ color: '#7b1fa2' }} />
     },
     {
+        id: 4,
         ariaLabel: "24-7-support",
         text: "24/7 Support",
         icon: <CallIcon fontSize="large" sx={{ color: '#7b1fa2' }} />
@@ -39,7 +43,7 @@ const ServiceSection = () => {
             <Grid container rowSpacing={{ xs: 2, sm: 2, md: 1 }} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 {services.map(item => {
                     return (
-                        <Grid item xs={12} sm={12} md={3}>
+                        <Grid key={item.id} item xs={12} sm={12} md={3}>
                             <Card sx={{ display: 'flex', padding: 2 }}>
                                 <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                                     <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>

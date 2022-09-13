@@ -15,26 +15,32 @@ import CardContent from '@mui/material/CardContent';
 
 const categories = [
     {
+        id: 1,
         text: "Men's dresses",
         imageUrl: "/static/cat-1.jpg",
     },
     {
+        id: 2,
         text: "Women's dresses",
         imageUrl: "/static/cat-2.jpg",
     },
     {
+        id: 3,
         text: "Kid's dresses",
         imageUrl: "/static/cat-3.jpg",
     },
     {
+        id: 4,
         text: "Accerssories",
         imageUrl: "/static/cat-4.jpg",
     },
     {
+        id: 5,
         text: "Bags",
         imageUrl: "/static/cat-5.jpg",
     },
     {
+        id: 6,
         text: "Shoes",
         imageUrl: "/static/cat-6.jpg",
     }
@@ -45,7 +51,7 @@ const CategorySection = () => {
             <Grid container rowSpacing={5} spacing={3}>
                 {categories.map(item => {
                     return (
-                        <Grid item xs={12} sm={12} md={4}>
+                        <Grid key={item.id} item xs={12} sm={12} md={4}>
                             <Card sx={{ maxWidth: 1, width: 1, height: 350, }}>
                                 <CardMedia
                                     component="img"
